@@ -1,5 +1,10 @@
 # leetcode
 to improve coding skills
+
+
+
+
+
 2.two sum
 
     class Solution {
