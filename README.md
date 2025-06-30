@@ -129,3 +129,41 @@ to improve coding skills
         return result;
     }
     };
+9.palindrome number
+     
+    class Solution {
+    public:
+    bool isPalindrome(int x) {
+        int temp=0;
+        bool answer;
+        int ans = 0;
+        temp=x;  
+        while (x != 0) {
+            int digit = x % 10;  
+            
+             
+            if ((ans > INT_MAX / 10) || (ans < INT_MIN / 10)) {
+                return 0;  
+            }
+            
+            ans = ans * 10 + digit;  
+            x = x / 10; 
+        }
+        
+         if(temp==ans)
+         {
+            answer=true;
+         }  
+         
+         if(temp!=ans)
+         {
+            answer=false;
+         }
+          if(temp<0)
+         {
+            answer=false;
+         }
+         return answer;
+    }
+    }; 
+   
