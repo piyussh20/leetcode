@@ -163,7 +163,29 @@ to improve coding skills
          {
             answer=false;
          }
+
+
+ 
          return answer;
     }
     }; 
    
+3300.find the original typed string
+
+     class Solution {
+     public:
+    int possibleStringCount(string word) {
+        int size = word.length();
+        int count = 1;
+
+        for (int i =1; i < size; i++) {
+            
+                if (word[i] == word[i-1]) {
+                    count++;
+                }
+            
+        }
+ 
+         return count;
+     }
+     };
