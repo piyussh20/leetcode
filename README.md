@@ -202,7 +202,31 @@ to improve coding skills
                ones[num % 10];
     }
     };
+20.valid parentheses
 
+     class Solution {
+    public:
+    bool isValid(string s) {
+        stack<char> res;
+        
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
+                res.push(s[i]);
+            } else {
+                if (res.empty()) return false; // no opening to match
+                char top = res.top();
+                if ((s[i] == ')' && top != '(') ||
+                    (s[i] == ']' && top != '[') ||
+                    (s[i] == '}' && top != '{')) {
+                    return false;
+                }
+                res.pop(); // matched successfully
+            }
+        }
+        
+        return res.empty(); // must be empty for full match
+    }
+    };
  
          return count;
      }
