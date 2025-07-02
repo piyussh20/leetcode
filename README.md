@@ -252,3 +252,28 @@ to improve coding skills
          return count;
      }
      };
+
+     
+27.remove elements
+   
+     class Solution {
+      public:
+    int removeElement(vector<int>& nums, int val) {
+        int res=0;
+        if (nums.size() == 0) return 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] == val) {
+                continue;
+            }
+            if(nums[i]!=val)
+            {
+                nums[res] = nums[i];
+                 res++;
+            }
+        }
+        return res;
+    }
+    };
+
+  
+ 
