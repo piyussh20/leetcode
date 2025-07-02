@@ -276,4 +276,21 @@ to improve coding skills
     };
 
   
- 
+ 29.DIVIDE TWO INTEGERS
+   
+     class Solution { 
+    public:
+    int divide(int dividend, int divisor) {
+     
+    if (dividend == INT_MIN && divisor == -1) { /*int x = -2147483648;
+    int result = x / -1;   
+
+     but here result would be 2147483648 and the value of INT_MAX is 2147483647 so there is diffrence of 1 so THE 
+     CLOSEST NUMBER IS TAKEN AS ANSWER SO HERE IT IS INT_MAX OTHERWISE IT WOULD CAUSE OUT OF BOND ACCESS ERROR
+     */
+            return INT_MAX;   
+        }
+
+        return dividend / divisor;
+    }
+    };
