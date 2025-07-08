@@ -22,7 +22,7 @@ to improve coding skills
         return result;
         
     }
-};
+    };
 
 
 
