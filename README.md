@@ -426,4 +426,13 @@ to improve coding skills
         return count;
         }
         };
+  69.sqrt(x)
     
+    class Solution {
+    public:
+    int mySqrt(int x) {
+          
+    int ans= sqrt(x);
+    return ans;
+   }  
+   };
