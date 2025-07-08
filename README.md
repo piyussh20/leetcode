@@ -376,14 +376,11 @@ to improve coding skills
 
 50.pow (x,n)
 
-    class Solution {
+     class Solution {
     public:
     double myPow(double x, int n) {
       double ans=pow(x,n);
         return ans;
-    }
+    }  
     };
-          
-          return pos;
-    }
-    };
+    
