@@ -339,7 +339,39 @@ to improve coding skills
     }
   
     };
+
+34.find first and last position of element in a sorted array
+       
+       class Solution {
+     public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+         int pos=-1,pos2=-1,temp=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            for(int j=nums.size()-1;j>=0;j--)
+            {
+            if(nums[i]==target)
+            {
+                pos=i;
+            }
+             if(nums[j]==target)
+            {
+                pos2=j;
+            }
+            }
+            
         }
-         return pos;
+        if(pos>pos2)
+        {
+        temp=pos;
+        pos=pos2;
+        pos2=temp;
+        }
+         return {pos,pos2};
+    }
+     };
+        }
+          
+          return pos;
     }
     };
