@@ -383,4 +383,21 @@ to improve coding skills
         return ans;
     }  
     };
+41.first missing positive
     
+    class Solution {
+    public:
+    int firstMissingPositive(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+
+        int n = 1;
+        for (int num : nums) {
+            if (num == n) 
+            {
+                n++;
+            }
+        }
+
+        return n;
+    }
+    };
