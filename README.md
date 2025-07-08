@@ -294,3 +294,36 @@ to improve coding skills
         return dividend / divisor;
     }
     };
+35.search insert position
+     
+     class Solution {
+    public:
+    int searchInsert(vector<int>& nums, int target) {
+         int pos;
+         
+        if(nums[0]>target)
+        {
+            pos=0;
+        }
+        for(int i=0;i<nums.size();i++)
+        {
+        if(nums[i]==target)
+        {
+            pos=i;
+        }
+        if(target>nums[nums.size()-1])
+        {
+            pos=nums.size();
+        }
+        }
+        for(int i=1;i<nums.size();i++)
+        {
+         if(target>nums[i-1] && target<nums[i])
+        {
+            pos=ceil((i+i+1)/2);
+        }
+           
+        }
+         return pos;
+    }
+    };
