@@ -401,3 +401,29 @@ to improve coding skills
         return n;
     }
     };
+58.length of last word
+    
+     class Solution {
+     public:
+    int lengthOfLastWord(string s) {
+        int count = 0, pos = -1;
+        for (int i = s.length() - 1; i >= 0; i--) {
+
+            if (s[i] != ' ') {
+                pos = i;
+                break;
+            }
+        }
+        if (pos == -1)
+            return 0;
+        for (int i = pos; i >= 0; i--) {
+            
+            if (s[i] == ' ') {
+                break;
+            }
+             count++;
+        }
+        return count;
+        }
+        };
+    
