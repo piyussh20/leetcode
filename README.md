@@ -479,3 +479,22 @@ to improve coding skills
         return ans;
     }
      };
+74.search a 2d matrix
+
+      class Solution {
+    public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        bool ans = false;
+        int m = matrix.size();
+        
+        for (int i = 0; i < m; i++) {
+             int n = matrix[i].size();
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] == target) {
+                    ans = true;
+                }
+            }
+        }
+        return ans;
+         }
+       };
