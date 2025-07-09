@@ -436,3 +436,29 @@ to improve coding skills
     return ans;
     }  
     };
+66.plus one
+
+     class Solution {
+     public:
+    vector<int> plusOne(vector<int>& digits) {
+        int n = digits.size();
+        
+        for (int i = n - 1; i >= 0; i--) {
+            if (digits[i] < 9) {
+                digits[i]++;
+                return digits;
+            } else {
+                digits[i] = 0;
+            }
+        }
+
+         
+        vector<int> result; // 99999
+        result.push_back(1);
+        for (int i = 1; i <= n; i++) {
+            result.push_back(0);
+        }
+        
+        return result;
+    }
+    };
