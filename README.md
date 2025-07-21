@@ -498,3 +498,22 @@ to improve coding skills
         return ans;
          }
        };
+977.square of sorted array
+      
+      class Solution {
+      public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        vector<int> square;
+        int ans;
+        for(int i=0;i<nums.size();i++)
+        {
+            ans=nums[i]*nums[i];
+            square.push_back(ans);
+        }
+        sort(square.begin(),square.end());
+        return square;
+
+    }
+     };
+
+ 
